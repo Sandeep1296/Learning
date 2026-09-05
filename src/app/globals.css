@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  @apply py-20;
+}
+
+/* Apple-style smooth scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(200 200 200);
+  border-radius: 99px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: rgb(60 60 60);
+}
+
+/* Selection highlight */
+::selection {
+  background: rgba(0, 0, 0, 0.12);
+  color: inherit;
+}
+.dark ::selection {
+  background: rgba(255, 255, 255, 0.15);
+  color: inherit;
+}
+
+/* Slick carousel dots */
+.slick-dots { color: #1A21BC; }
+.slick-dots li.slick-active button:before { opacity: 1; color: #1a21bc !important; }
+.slick-dots li button:before { font-size: 11px !important; }
+
+/* Modal animation */
+@keyframes modalIn {
+  from { opacity: 0; transform: scale(0.95) translateY(10px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+.modal-enter {
+  animation: modalIn 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Clean base backgrounds */
+@layer base {
+  html, body {
+    @apply bg-white dark:bg-neutral-950 text-neutral-900 dark:text-white;
+  }
+}

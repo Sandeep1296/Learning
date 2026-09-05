@@ -1,0 +1,86 @@
+# ── Dependencies ────────────────────────────────────────────────────────────
+node_modules/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+.eggs/
+
+# ── Build outputs ────────────────────────────────────────────────────────────
+.next/
+out/
+dist/
+build/
+target/
+*.spec
+
+# ── Environment & secrets ────────────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+# .env.example is intentionally tracked (no secrets, just keys template)
+
+# ── Python virtual environments ──────────────────────────────────────────────
+.venv/
+venv/
+env/
+ENV/
+
+# ── Databases & local storage ────────────────────────────────────────────────
+*.db
+*.sqlite3
+*.sqlite3-journal
+chroma_db/
+*.chroma
+research_assistant.db
+
+# ── Logs ─────────────────────────────────────────────────────────────────────
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pip-log.txt
+
+# ── Lock files (reproducibility handled by requirements.txt / package.json) ──
+package-lock.json
+yarn.lock
+poetry.lock
+Pipfile.lock
+uv.lock
+
+# ── Test & coverage ──────────────────────────────────────────────────────────
+.coverage
+.coverage.*
+htmlcov/
+.pytest_cache/
+.tox/
+.nox/
+coverage.xml
+*.cover
+nosetests.xml
+
+# ── Type checkers & linters ──────────────────────────────────────────────────
+.mypy_cache/
+.dmypy.json
+.pyre/
+.pytype/
+.ruff_cache/
+
+# ── IDE & editor ─────────────────────────────────────────────────────────────
+.idea/
+.vscode/
+*.swp
+*.swo
+.cursorignore
+.cursorindexingignore
+
+# ── OS metadata ──────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ── User-uploaded content (keep folder structure, ignore files) ──────────────
+repository/users/*/uploads/*
+repository/users/*/notes/*
